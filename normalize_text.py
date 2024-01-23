@@ -56,6 +56,7 @@ def lem(tokens):
 def remove_numeric(tokens):
    return [token for token in tokens if not any(char.isdigit() for char in token)]
 
+# This function "normalize" is only used for testing
 def normalize(text):
   tokens = tokenize(text)
   tokens =lower(tokens)
@@ -144,7 +145,7 @@ def process_file(filename, to_lower, to_stem, to_lem, to_rm_punct, to_rm_stpw,tp
     print("number of tokens after punct:", len(tokens))
   if tp_rm_num:
     tokens = remove_numeric(tokens)
-    print("number of tokens after removing numericals:", len(tokens))
+    print("number of tokens after num:", len(tokens))
   if to_stem:
     tokens = stem(tokens)
     print("number of tokens after stem:", len(tokens))
@@ -169,7 +170,7 @@ def main():
   parser.add_argument('--lem', action='store_true', help='Lemmatize the words in the text')
   parser.add_argument('--punct', action='store_true', help='Remove punctuation from the text')
   parser.add_argument('--stopw', action='store_true', help='Remove stopwords from the text')
-  parser.add_argument('--num', action='store_true', help='Remove stopwords from the text')
+  parser.add_argument('--num', action='store_true', help='Remove non alphabetic from the text')
 
 
   args = parser.parse_args()
