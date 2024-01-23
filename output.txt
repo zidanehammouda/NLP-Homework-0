@@ -1,0 +1,25 @@
+Number of unique tokens: 8131
+
+Most used 10 words:
+jo: 1416
+say: 1255
+go: 937
+one: 931
+it: 926
+littl: 772
+like: 716
+meg: 705
+look: 684
+ami: 673
+
+Less used 10 words:
+newslett: 1
+subscrib: 1
+facil: 1
+pg: 1
+necessarili: 1
+network: 1
+hart: 1
+current: 1
+swamp: 1
+donor: 1
